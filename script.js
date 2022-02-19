@@ -110,7 +110,7 @@ function updateProgressBar(e) {
     console.log("minutes", durationMinutes);
 
     let durationSeconds = Math.floor(duration % 60);
-    console.log(durationSeconds);
+    console.log("seconds", durationSeconds);
   }
 }
 
