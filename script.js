@@ -99,11 +99,18 @@ loadSong(songs[songIndex]);
 function updateProgressBar(e) {
   if (isPlaying) {
     const { duration, currentTime } = e.srcElement;
-    console.log(duration, currentTime);
+    //console.log(duration, currentTime);
     // update progress bar width
     const progressPercent = (currentTime / duration) * 100;
 
     progress.style.width = `${progressPercent}%`;
+
+    //calculate display for duration
+    const durationMinutes = Math.floor(duration / 60);
+    console.log("minutes", durationMinutes);
+
+    let durationSeconds = Math.floor(duration % 60);
+    console.log(durationSeconds);
   }
 }
 
